@@ -1,0 +1,46 @@
+{
+    // Входные точки для генерации документации.
+    // Можно указать конкретные файлы или каталоги.
+    "entryPoints": ["src/index.mts"],
+
+    // Путь к tsconfig.json для правильной компиляции и анализа типов.
+    "tsconfig": "tsconfig.build.json",
+
+    // Каталог, в который будет выводиться сгенерированная документация.
+    "out": "docs",
+
+    // Отображаемое имя проекта в документации.
+    "name": "@rotcetihra/ts-template-project",
+
+    // Исключать ли внешние зависимости (например, из node_modules).
+    "excludeExternals": true,
+
+    // Исключать ли приватные члены из документации.
+    "excludePrivate": true,
+
+    // Исключать ли защищённые члены из документации.
+    "excludeProtected": false,
+
+    // Добавлять ли версию проекта (из package.json) в документацию.
+    "includeVersion": true,
+
+    // Группировать ли элементы API по категориям.
+    "categorizeByGroup": true,
+
+    // Используемая тема оформления.
+    "theme": "typedoc-github-theme",
+
+    // Список используемых плагинов TypeDoc.
+    "plugin": [
+        // Добавляет ссылки на MDN типы. Например, HTMLElement, Date, Object и т.д.
+        // https://www.npmjs.com/package/typedoc-plugin-mdn-links
+        "typedoc-plugin-mdn-links",
+
+        // Переименовывает default-экспорт в исходное имя.
+        // https://www.npmjs.com/package/typedoc-plugin-rename-defaults
+        "typedoc-plugin-rename-defaults",
+
+        // Тема в стиле GitHub
+        "typedoc-github-theme"
+    ]
+}
